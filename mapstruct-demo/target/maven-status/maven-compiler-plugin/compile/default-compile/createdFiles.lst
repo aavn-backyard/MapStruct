@@ -1,0 +1,12 @@
+ch\axonactive\demo\mapper\NumberMapperImpl.class
+ch\axonactive\demo\mapper\SeveralSourcePersonMapperImpl.class
+ch\axonactive\demo\mapper\InvokingOtherMapperImpl.class
+ch\axonactive\demo\mapper\DateMapperImpl.class
+ch\axonactive\demo\mapper\PersonsMapperImpl.class
+ch\axonactive\demo\mapper\MaritalStatusMapperImpl$1.class
+ch\axonactive\demo\mapper\MaritalStatusMapperImpl.class
+ch\axonactive\demo\mapper\PersonMapperImpl.class
+ch\axonactive\demo\mapper\CallbackActionMapperImpl.class
+ch\axonactive\demo\mapper\UpdateExistingPersonMapperImpl.class
+ch\axonactive\demo\generated\mapper\SimpleSourceDestinationMapperImpl.class
+ch\axonactive\demo\mapper\InheritInverseConfigurationPersonMapperImpl.class
