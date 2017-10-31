@@ -209,3 +209,46 @@ public interface PersonMapper {
     PersonDTO toDTO(Person person);
 }
 ```
+Now only need to execute command *mvn compile* to generate the implementation class
+This is test case:
+```java
+@Test
+	public void basicMapping_givenDTO_to_Entity() {
+
+		PersonDTO dto = new PersonDTO();
+		dto.setFirstName("Trung");
+		dto.setLastName("Do");
+		dto.setStreetName("Truong Son");
+		dto.setHouseNumber(39);
+
+		Person entity = PersonMapper.INSTANCE.toEntity(dto);
+
+		assertEquals(entity.getFirstName(),"Trung");
+		assertEquals(entity.getLastName(), "Do");
+		assertNotNull(entity.getAddress());
+		assertEquals(entity.getAddress().getHouseNo(), 39);
+		assertEquals(entity.getAddress().getStreet(), "Truong Son");
+
+	}
+	
+	@Test
+	public void basicMapping_givenEntity_to_DTO() {
+
+		Person person = new Person();
+		Address address = new Address();
+		address.setHouseNo(39);
+		address.setStreet("Truong Son");
+		person.setAddress(address);
+		person.setFirstName("Trung");
+		person.setLastName("Do");
+
+		PersonDTO entityDTO = PersonMapper.INSTANCE.toDTO(person);
+
+		assertEquals(entityDTO.getFirstName(),"Trung");
+		assertEquals(entityDTO.getLastName(), "Do");
+		assertEquals(entityDTO.getHouseNumber(), 39);
+		assertEquals(entityDTO.getStreetName(), "Truong Son");
+
+	}
+	```
+
