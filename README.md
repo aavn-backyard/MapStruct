@@ -211,8 +211,9 @@ public interface PersonMapper {
 ```
 Now only need to execute command *mvn compile* to generate the implementation class
 This is test case:
+
 ```java
-@Test
+       @Test
 	public void basicMapping_givenDTO_to_Entity() {
 
 		PersonDTO dto = new PersonDTO();
@@ -250,5 +251,5 @@ This is test case:
 		assertEquals(entityDTO.getStreetName(), "Truong Son");
 
 	}
-	```
+```
 
