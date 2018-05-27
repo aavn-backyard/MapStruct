@@ -13,7 +13,7 @@ import org.junit.Test;
 
 import ch.axonactive.demo.bean.Address;
 import ch.axonactive.demo.bean.Person;
-import ch.axonactive.demo.bean.PersonDTO;
+import ch.axonactive.demo.dto.PersonDTO;
 import ch.axonactive.demo.enums.AvalogMaritalStatus;
 import ch.axonactive.demo.enums.MaritalStatus;
 import ch.axonactive.demo.mapper.InheritInverseConfigurationPersonMapper;

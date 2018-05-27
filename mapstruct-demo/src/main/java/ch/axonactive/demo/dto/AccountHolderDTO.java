@@ -1,8 +1,10 @@
-package ch.axonactive.demo.bean;
+package ch.axonactive.demo.dto;
 
 public class AccountHolderDTO {
 	private String id;
 	private PersonDTO personDto;
+	private ContactDTO contactDto;
+	
 	public String getId() {
 		return id;
 	}
@@ -14,6 +16,12 @@ public class AccountHolderDTO {
 	}
 	public void setPersonDto(PersonDTO personDto) {
 		this.personDto = personDto;
+	}
+	public ContactDTO getContactDto() {
+		return contactDto;
+	}
+	public void setContactDto(ContactDTO contactDto) {
+		this.contactDto = contactDto;
 	}
 	
 }

@@ -7,7 +7,7 @@ import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 import ch.axonactive.demo.bean.AccountHolder;
-import ch.axonactive.demo.bean.AccountHolderDTO;
+import ch.axonactive.demo.dto.AccountHolderDTO;
 
 @Mapper(uses= PersonMapper.class)
 public abstract class CallbackActionMapper {

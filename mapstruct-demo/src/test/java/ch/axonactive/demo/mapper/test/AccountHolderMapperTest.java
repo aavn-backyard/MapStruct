@@ -5,8 +5,9 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
 import ch.axonactive.demo.bean.AccountHolder;
-import ch.axonactive.demo.bean.AccountHolderDTO;
-import ch.axonactive.demo.bean.PersonDTO;
+import ch.axonactive.demo.dto.AccountHolderDTO;
+import ch.axonactive.demo.dto.ContactDTO;
+import ch.axonactive.demo.dto.PersonDTO;
 import ch.axonactive.demo.mapper.CallbackActionMapper;
 import ch.axonactive.demo.mapper.InvokingOtherMapper;
 public class AccountHolderMapperTest {
@@ -19,9 +20,14 @@ public class AccountHolderMapperTest {
 		dto.setStreetName("Truong Son");
 		dto.setHouseNumber(39);
 		
+		ContactDTO contactDto = new ContactDTO();
+		 contactDto.setEmail("trung.do@axonactive.com");
+		 contactDto.setLandlinephone("09999999999");
+		
 		AccountHolderDTO ah = new AccountHolderDTO();
 		ah.setId("COB-001");
 		ah.setPersonDto(dto);
+		ah.setContactDto(contactDto);
 
 		AccountHolder entity = InvokingOtherMapper.INSTANCE.toEntity(ah);
 
@@ -31,6 +37,8 @@ public class AccountHolderMapperTest {
 		assertNotNull(entity.getPerson().getAddress());
 		assertEquals(entity.getPerson().getAddress().getHouseNo(), 39);
 		assertEquals(entity.getPerson().getAddress().getStreet(), "Truong Son");
+		assertEquals(entity.getContact().getEmail(), "trung.do@axonactive.com");
+		assertEquals(entity.getContact().getPhone(), "09999999999");
 
 	}
 	

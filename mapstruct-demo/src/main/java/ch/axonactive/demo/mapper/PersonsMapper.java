@@ -8,7 +8,7 @@ import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 import ch.axonactive.demo.bean.Person;
-import ch.axonactive.demo.bean.PersonDTO;
+import ch.axonactive.demo.dto.PersonDTO;
 
 @Mapper
 public interface PersonsMapper {

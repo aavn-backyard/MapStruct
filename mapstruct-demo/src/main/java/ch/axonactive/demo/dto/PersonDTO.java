@@ -1,4 +1,4 @@
-package ch.axonactive.demo.bean;
+package ch.axonactive.demo.dto;
 
 public class PersonDTO {
 	private String firstName;
