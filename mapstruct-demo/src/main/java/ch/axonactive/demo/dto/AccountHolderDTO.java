@@ -4,6 +4,7 @@ public class AccountHolderDTO {
 	private String id;
 	private PersonDTO personDto;
 	private ContactDTO contactDto;
+	private CareerDTO careerDto;
 	
 	public String getId() {
 		return id;
@@ -22,6 +23,12 @@ public class AccountHolderDTO {
 	}
 	public void setContactDto(ContactDTO contactDto) {
 		this.contactDto = contactDto;
+	}
+	public CareerDTO getCareerDto() {
+		return careerDto;
+	}
+	public void setCareerDto(CareerDTO careerDto) {
+		this.careerDto = careerDto;
 	}
 	
 }

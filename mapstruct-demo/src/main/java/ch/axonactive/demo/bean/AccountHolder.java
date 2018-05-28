@@ -4,6 +4,7 @@ public class AccountHolder {
 	private String id;
 	private Person person;
 	private Contact contact;
+	private Career career;
 	
 	public String getId() {
 		return id;
@@ -22,6 +23,12 @@ public class AccountHolder {
 	}
 	public void setContact(Contact contact) {
 		this.contact = contact;
+	}
+	public Career getCareer() {
+		return career;
+	}
+	public void setCareer(Career career) {
+		this.career = career;
 	}
 	
 }
