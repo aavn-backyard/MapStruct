@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import ch.axonactive.demo.bean.AccountHolder;
 import ch.axonactive.demo.dto.AccountHolderDTO;
+import ch.axonactive.demo.dto.CareerDTO;
 import ch.axonactive.demo.dto.ContactDTO;
 import ch.axonactive.demo.dto.PersonDTO;
 import ch.axonactive.demo.mapper.CallbackActionMapper;
@@ -23,11 +24,16 @@ public class AccountHolderMapperTest {
 		ContactDTO contactDto = new ContactDTO();
 		 contactDto.setEmail("trung.do@axonactive.com");
 		 contactDto.setLandlinephone("09999999999");
+		 
+		 CareerDTO careerDto = new CareerDTO();
+		 careerDto.setNameOfCompany("Axon Active Vietnam");
+		 careerDto.setOccupation("Developer");
 		
 		AccountHolderDTO ah = new AccountHolderDTO();
 		ah.setId("COB-001");
 		ah.setPersonDto(dto);
 		ah.setContactDto(contactDto);
+		ah.setCareerDto(careerDto);
 
 		AccountHolder entity = InvokingOtherMapper.INSTANCE.toEntity(ah);
 
@@ -39,6 +45,8 @@ public class AccountHolderMapperTest {
 		assertEquals(entity.getPerson().getAddress().getStreet(), "Truong Son");
 		assertEquals(entity.getContact().getEmail(), "trung.do@axonactive.com");
 		assertEquals(entity.getContact().getPhone(), "09999999999");
+		assertEquals(entity.getCareer().getCompanyName(), "Axon Active Vietnam");
+		assertEquals(entity.getCareer().getOccupation(), "Developer");
 
 	}
 	
