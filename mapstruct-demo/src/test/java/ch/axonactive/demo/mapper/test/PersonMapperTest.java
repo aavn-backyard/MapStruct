@@ -65,6 +65,26 @@ public class PersonMapperTest {
 	}
 	
 	@Test
+	public void basicMapping_givenEntity_to_DTO_defaultValue() {
+
+		Person person = new Person();
+		Address address = new Address();
+		address.setHouseNo(39);
+		//address.setStreet("Truong Son");
+		person.setAddress(address);
+		person.setFirstName("Trung");
+		person.setLastName("Do");
+
+		PersonDTO entityDTO = PersonMapper.INSTANCE.toDTO(person);
+
+		assertEquals(entityDTO.getFirstName(),"Trung");
+		assertEquals(entityDTO.getLastName(), "Do");
+		assertEquals(entityDTO.getHouseNumber(), 39);
+		assertEquals(entityDTO.getStreetName(), "39b, Truong Son");
+
+	}
+	
+	@Test
 	public void severalSource_givenDTO_to_Entity() {
 
 		PersonDTO dto = new PersonDTO();

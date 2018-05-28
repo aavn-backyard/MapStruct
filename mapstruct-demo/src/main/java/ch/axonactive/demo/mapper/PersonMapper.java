@@ -22,7 +22,7 @@ public interface PersonMapper {
 	@Mappings({
 		//@Mapping(target = "firstName", source = "firstName"),
 		//@Mapping(target = "lastName", source = "lastName"),
-		@Mapping(target = "streetName", source = "address.street"),
+		@Mapping(target = "streetName", source = "address.street", defaultValue="39b, Truong Son"),
 		@Mapping(target = "houseNumber", source = "address.houseNo")
 	})
     PersonDTO toDTO(Person person);
